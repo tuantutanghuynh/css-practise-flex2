@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom right, #f5eaff, #d9f2ff);
+  font-family: 'Segoe UI', sans-serif;
+  padding: 40px;
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  border-radius: 24px;
+  overflow: hidden;
+  max-width: 1100px;
+  margin: auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.box {
+  flex: 1 1 33.33%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 12px;
+  color: #fff;
+}
+
+.box h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.box ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.box li {
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+.box .highlight {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 10px;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+/* Màu nền từng box */
+.search { background: #f38262; }
+.cro    { background: #ec5b5b; }
+.social { background: #f39e58; }
+.other  { background: #f1cc45; color: #333; }
+
+.cta {
+  background: #3f464b;
+  flex: 2 1 66.66%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.cta h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.cta p {
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+.cta button {
+  background: #fff;
+  color: #1a1a1a;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  width: fit-content;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cta button:hover {
+  background: #eaeaea;
+}
+
+@media (max-width: 800px) {
+  .box {
+    flex: 1 1 100%;
+  }
+
+  .cta {
+    order: 6;
+  }
+}
